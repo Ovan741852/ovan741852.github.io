@@ -1,0 +1,21 @@
+#helloWorld {
+    font-size: 2em;
+    text-align: center;
+    line-height: 100vh; /* 垂直居中 */
+    white-space: nowrap; /* 避免文字折行 */
+}
+
+/* 橫屏時的樣式 */
+@media screen and (orientation: landscape) {
+    body {
+        overflow: hidden; /* 禁止垂直滾動 */
+    }
+
+    #helloWorld {
+        transform: rotate(90deg);
+        transform-origin: left top;
+        width: 100vh; /* 旋轉後寬度為視窗的高度 */
+        height: 100vh; /* 旋轉後高度為視窗的寬度 */
+        white-space: nowrap; /* 避免文字折行 */
+    }
+}
